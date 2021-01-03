@@ -1,4 +1,4 @@
-import Link from "next/Link"
+import Link from "next/link"
 import graphql from "graphql-tag"
 import client from "../../components/ApolloClient"
 import Layout from "../../components/Layout"
