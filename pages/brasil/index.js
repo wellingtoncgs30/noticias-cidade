@@ -1,5 +1,5 @@
 import Layout from "../../components/Layout"
-import style from "../../styles/sectionBrazil.module.css"
+import style from "../../styles/SectionBrazil.module.css"
 import Link from "next/link"
 import client from "../../components/ApolloClient"
 import graphql from "graphql-tag"
