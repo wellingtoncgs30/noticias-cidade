@@ -1,0 +1,153 @@
+import Link from "next/link"
+import graphql from "graphql-tag"
+import client from "../../components/ApolloClient"
+import Layout from "../../components/Layout"
+import style from "../../styles/World.module.css"
+
+const currentNew = graphql`
+query MyQuery {
+    post(id: "cG9zdDo2OQ==") {
+      id
+      databaseId
+      title
+      content
+      uri
+      featuredImage {
+        node {
+          sourceUrl
+        }
+      }
+    }
+  }
+`
+
+const previewNew = graphql`
+query MyQuery {
+    post(id: "cG9zdDo3NQ==") {
+      id
+      databaseId
+      title
+      content
+      uri
+      featuredImage {
+        node {
+          sourceUrl
+        }
+      }
+    }
+  }
+`
+
+const nextNew = graphql`
+query MyQuery {
+    post(id: "cG9zdDo3MQ==") {
+      id
+      databaseId
+      title
+      content
+      uri
+      featuredImage {
+        node {
+          sourceUrl
+        }
+      }
+    }
+  }
+`
+
+const lastNew = graphql`
+query MyQuery {
+    post(id: "cG9zdDo3Mw==") {
+      id
+      databaseId
+      title
+      content
+      uri
+      featuredImage {
+        node {
+          sourceUrl
+        }
+      }
+    }
+  }
+`
+
+export default function Uri(props) {
+    const { currentNew } = props
+    const { previewNew } = props
+    const { nextNew } = props
+    const { lastNew } = props
+    return(
+        <Layout>
+            <div className="container">
+                <div className="row">
+                    {currentNew ? (
+                        <div className="col-8 col-sm-8 col-md-8">
+                            <h1 className={`text-center ${style.mainTitle}`}>{currentNew.title}</h1>
+                            <img src={currentNew.featuredImage.node.sourceUrl} alt="Imagem da notícia principal" id={style.mainNew}></img>
+                            <p className={`text-justify ${style.content}`}>{currentNew.content.replace(/(<([^>]+)>)/ig, "")}</p>
+                        </div>
+                    ) : ""}
+                    <div className="col-4 col-sm-4 col-md-4">
+                        <h1 className={`text-center ${style.mainTitle}`}>Notícias relacionadas</h1>
+                        {previewNew ? (
+                            <div className="card mb-2">
+                                <h2 className={style.secondaryTitle}>{previewNew.title}</h2>
+                                <img src={previewNew.featuredImage.node.sourceUrl} alt="Imagem da notícia" className={style.imageNews}></img>
+                                <div className="card-body">
+                                    <p className={`text-justify ${style.cardParagraph}`}>{previewNew.content.slice(0, 60).replace(/(<([^>]+)>)/ig, "")}</p>
+                                    <Link href={`/mundo${previewNew.uri}`}>
+                                        <a>
+                                            <button className={`btn btn-link btn-block ${style.readMore}`}>Leia mais</button>
+                                        </a>
+                                    </Link>
+                                </div>
+                            </div>
+                        ) : ""}
+                        {nextNew ? (
+                            <div className="card mb-2">
+                                <h2 className={style.secondaryTitle}>{nextNew.title}</h2>
+                                <img src={nextNew.featuredImage.node.sourceUrl} alt="Imagem da notícia" className={style.imageNews}></img>
+                                <div className="card-body">
+                                    <p className={`text-justify ${style.cardParagraph}`}>{nextNew.content.slice(0, 60).replace(/(<([^>]+)>)/ig, "")}</p>
+                                    <Link href={`/mundo${nextNew.uri}`}>
+                                        <a>
+                                            <button className={`btn btn-link btn-block ${style.readMore}`}>Leia mais</button>
+                                        </a>
+                                    </Link>
+                                </div>
+                            </div>
+                        ) : ""}
+                        {lastNew ? (
+                            <div className="card mb-2">
+                                <h2 className={style.secondaryTitle}>{lastNew.title}</h2>
+                                <img src={lastNew.featuredImage.node.sourceUrl} alt="Imagem da notícia" className={style.imageNews}></img>
+                                <div className="card-body">
+                                    <p className={`text-justify ${style.cardParagraph}`}>{lastNew.content.slice(0, 60).replace(/(<([^>]+)>)/ig, "")}</p>
+                                    <Link href={`/mundo${lastNew.uri}`}>
+                                        <a>
+                                            <button className={`btn btn-link btn-block ${style.readMore}`}>Leia mais</button>
+                                        </a>
+                                    </Link>
+                                </div>
+                            </div>
+                        ) : ""}
+                    </div>
+                </div>
+            </div>
+        </Layout>
+    )
+}
+
+Uri.getInitialProps = async function() {
+    const news = await client.query({query: currentNew})
+    const previewNews = await client.query({query: previewNew})
+    const nextNews = await client.query({query: nextNew})
+    const lastNews = await client.query({query: lastNew})
+    return {
+        currentNew: news.data.post,
+        previewNew: previewNews.data.post,
+        nextNew: nextNews.data.post,
+        lastNew: lastNews.data.post
+    }
+}

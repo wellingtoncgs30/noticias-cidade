@@ -1,16 +1,116 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+/*cor: #b10333*/
+* {
+    font-family: Oswald;
+    width: fit-content;
+  }
+
+header.header {
+  background: url("../public/images/fundo.png") repeat-x;
+  height: 37vh;
+  width: 100%;
 }
 
-a {
-  color: inherit;
+header img#logo {
+  height: 20vh;
+  width: 37vh;
+}
+
+header.header div#navbar {
+  background-color: #b10333;
+}
+
+header.header div#navbar ul li a {
+  color: white;
+  font-size: 30px;
+  background: url("../public/images/divisor.png") no-repeat left center;
+  cursor: pointer;
+}
+
+header.header div#navbar ul li a:active {
+  color: #69001d;
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+footer.footer {
+  background-color: #294c71;
+  padding: 20px;
+  color: white;
+  width: 100%;
+}
+
+@media (min-width: 576px) {
+  header.header {
+    height: 66vh;
+    width: 100vw;
+  }
+
+  header.header div#navbar ul li a {
+    color: white;
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 768px) {
+  * {
+    width: auto;
+  }
+
+  header.header {
+    height: 24vh;
+  }
+
+  header img#logo {
+    height: 10vh;
+    width: 20vh;
+  }
+
+  a.link {
+    font-weight: 600;
+  }
+
+  header.header div#navbar ul li a {
+    font-size: 21px;
+    background: url("../public/images/divisor.png") no-repeat left center;
+  }
+}
+
+@media (min-width: 992px) {
+  header.header {
+    height: 33vh;
+  }
+
+  header img#logo {
+    height: 11vh;
+    width: 20vh;
+  }
+
+  header.header div#navbar ul li a {
+    font-size: 31px;
+    background: url("../public/images/divisor.png") no-repeat left center;
+  }
+}
+
+@media (min-width: 1200px) {
+  * {
+    width: 100%;
+  }
+
+  header.header {
+    height: 37vh;
+    width: 100%;
+  }
+
+  header.header div#navbar ul li a {
+    font-size: 30px;
+    background: url("../public/images/divisor.png") no-repeat left center;
+  }
+
+  a#first {
+    background: none;
+  }
+
+  header.header div#navbar ul li a:hover {
+    color: #69001d;
+  }
 }

@@ -1,0 +1,189 @@
+section#sectionIndex {
+    width: 100%;
+}
+
+a.link {
+    color: black;
+    font-size: 33px;
+    font-weight: 600;
+    line-height: 41px;
+    text-decoration: none;
+}
+
+div.interviews, div.lastInterview, div.feature, div.news {
+    background: url("../public/images/fundo-caixa.png");
+}
+
+a.link:active {
+    color: #a1a1a1;
+}
+
+h1.title {
+    font-size: 45px;
+    background-color: #294c71;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    padding: 5px;
+    width: 100%;
+}
+
+h2.mainTitle {
+    background-color: #b10333;
+    font-weight: bold;
+    font-size: 40px;
+    text-transform: uppercase;
+    color: white;
+    width: 100%;
+}
+
+img#doctor, img#taxi, img.technology, img.images {
+    width: 100%;
+}
+
+div.content {
+    text-align: justify;
+    width: 100%;
+    background-color: white;
+    padding: 5px;
+}
+
+p.paragraph {
+    font-size: 30px;
+}
+
+label#email {
+    font-size: 30px;
+}
+
+button#readMore, button#readMoreFeature {
+    font-size: 35px;
+    color: #de003e;
+}
+
+button#submit {
+    background-color: #b10333;
+    color: white;
+    font-size: 35px;
+}
+
+h3.cardTitle {
+    font-size: 33px;
+    font-weight: bold;
+    color: #3e7ab9;
+}
+
+p.cardParagraph {
+    font-size: 28px;
+    text-align: justify;
+    color: black;
+}
+
+a.cardLink {
+    text-decoration: none;
+}
+
+@media (min-width: 576px) {
+    section#sectionIndex {
+        width: auto;
+    }
+
+    img#doctor, img#taxi {
+        width: 100%;
+    }
+
+    h1.title {
+        font-size: 22px;
+    }
+
+    h2.mainTitle {
+        font-size: 16px;
+    }
+
+    a.link {
+        font-weight: 500;
+        font-size: 20px;
+    }
+
+    p.paragraph {
+        font-size: 18px;
+    }
+
+    button#readMore, button#readMoreFeature {
+        font-size: 20px;
+        color: #de003e;
+    }
+
+    label#email, button#submit {
+        font-size: 25px;
+    }
+
+    h3.cardTitle {
+        font-size: 23px;
+    }
+
+    p.cardParagraph {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 768px) {
+    a.link {
+        font-size: 14px;
+    }
+
+    h1.title {
+        font-size: 20px;
+    }
+
+    h2.mainTitle {
+        font-size: 25px;
+    }
+
+    p.paragraph {
+        font-size: 20px;
+    }
+
+    label#email, button#submit {
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 992px) {
+    h1.title, h2.mainTitle {
+        font-size: 30px;
+    }
+
+    a.link {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    label#email, button#submit {
+        font-size: 28px;
+    }
+
+    h3.cardTitle {
+        font-size: 28px;
+    }
+
+    p.cardParagraph, p.paragraph, button#readMore, button#readMoreFeature {
+        font-size: 25px;
+    }
+}
+
+@media (min-width: 1200px) {
+    div.content {
+        background-color: white;
+    }
+
+    a.link:hover {
+        color: #a1a1a1;
+        background: url("../public/images/marcador.png") no-repeat left;
+        padding: 20px;
+    }
+
+    h1.title {
+        font-size: 37px;
+    }
+}

@@ -1,0 +1,145 @@
+section#sectionBrazil {
+    width: 100%;
+}
+
+a.link {
+    color: black;
+    font-size: 33px;
+    font-weight: 600;
+    line-height: 41px;
+    text-decoration: none;
+}
+
+a.link:active {
+    color: #a1a1a1;
+}
+
+h1.title {
+    font-size: 45px;
+    background-color: #294c71;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    padding: 5px;
+    width: 100%;
+}
+
+div.interviews, div.feature, div.news, div.world {
+    background: url("../public/images/fundo-caixa.png");
+}
+
+div.content {
+    background-color: white;
+    padding: 5px;
+}
+
+h2.mainTitle {
+    background-color: #b10333;
+    font-weight: bold;
+    font-size: 40px;
+    text-transform: uppercase;
+    color: white;
+    width: 100%;
+}
+
+img#taxi, img.technology {
+    width: 100%;
+}
+
+button#readMore {
+    font-size: 35px;
+    color: #de003e;
+}
+
+p.paragraph {
+    font-size: 30px;
+}
+
+label#email {
+    font-size: 30px;
+}
+
+button#submit {
+    background-color: #b10333;
+    color: white;
+    font-size: 35px;
+}
+
+h3.cardTitle {
+    font-size: 33px;
+    font-weight: bold;
+    color: #3e7ab9;
+}
+
+p.cardParagraph {
+    font-size: 28px;
+    text-align: justify;
+    color: black;
+}
+
+@media (min-width: 576px) {
+    h1.title {
+        font-size: 23px;
+    }
+
+    h2.mainTitle {
+        font-size: 20px;
+    }
+
+    a.link {
+        font-size: 16px;
+        line-height: 0;
+    }
+
+    p.paragraph, button#readMore, label#email, button#submit {
+        font-size: 19px;
+    }
+
+    h3.cardTitle {
+        font-size: 23px;
+    }
+
+    p.cardParagraph {
+        font-size: 20px;
+    }
+
+    img.technology {
+        height: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    h1.title {
+        font-size: 34px;
+    }
+
+    a.link {
+        font-size: 23px;
+        line-height: 41px;
+    }
+
+    h2.mainTitle {
+        font-size: 30px;
+    }
+
+    p.paragraph, button#readMore, label#email, 
+    button#submit, p.cardParagraph {
+        font-size: 25px;
+    }
+
+    h3.cardTitle {
+        font-size: 28px;
+    }
+}
+
+@media (min-width: 992px) {
+    
+}
+
+@media (min-width: 1200px) {
+    a.link:hover {
+        color: #a1a1a1;
+        background: url("../public/images/marcador.png") no-repeat left;
+        padding: 20px;
+    }
+}

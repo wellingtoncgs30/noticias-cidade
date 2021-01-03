@@ -1,0 +1,78 @@
+h1.mainTitle {
+    font-size: 45px;
+    background-color: #294c71;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    padding: 5px;
+    width: 100%;
+}
+
+h2.secondaryTitle {
+    background-color: #b10333;
+    font-weight: bold;
+    font-size: 40px;
+    text-transform: uppercase;
+    color: white;
+    text-align: justify;
+    width: 100%;
+}
+
+p.content, p.cardParagraph {
+    font-size: 33px;
+}
+
+button#readMore, button.readMore {
+    font-size: 33px;
+    color: #de003e;
+}
+
+img#mainNew, img#imageNews, img.imageNews {
+    width: 100%;
+}
+
+@media (min-width: 576px) {
+    h1.mainTitle {
+        font-size: 22px;
+    }
+
+    h2.secondaryTitle {
+        font-size: 16px;
+    }
+
+    p.content, p.cardParagraph {
+        font-size: 18px;
+    }
+
+    button#readMore {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 768px) {
+    h1.mainTitle {
+        font-size: 35px;
+    }
+
+    h2.secondaryTitle {
+        font-size: 28px;
+    }
+
+    p.content, p.cardParagraph, button#readMore {
+        font-size: 25px;
+    }
+}
+
+@media (min-width: 992px) {
+    h1.mainTitle {
+        font-size: 40px;
+    }
+
+    h2.secondaryTitle {
+        font-size: 33px;
+    }
+
+    p.content, p.cardParagraph, button#readMore {
+        font-size: 32px;
+    }
+}
